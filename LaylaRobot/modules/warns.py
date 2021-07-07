@@ -115,16 +115,14 @@ def warn(user: User,
                       f"<b>Counts:</b> <code>{num_warns}/{limit}</code>")
 
     else:
-        buttons = InlineKeyboardMarkup().add(
-        InlineKeyboardButton(
-            "⚠️ Remove warn", callback_data="remove_warn_{}".format(warn_id)
-        )
-    )
-        buttons.insert(
+        keyboard = InlineKeyboardMarkup([[
             InlineKeyboardButton(
-                "📝 Rules", url=await get_start_link(f"btn_rules_{chat_id}")
-            )
-        )
+                "⚠️ Remove warn", callback_data="rm_warn({})".format(user.id))
+        ]])
+        keyboard = InlineKeyboardMarkup([[
+            InlineKeyboardButton(
+                "📝 Rules", url=http://t.me/Kumikosetsukobot?start=rules_{group_id}")
+        ]])
 
         reply = (
             f"<code>❕</code><b>Warn Event</b>\n"
