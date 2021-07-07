@@ -202,7 +202,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Devs
             elif new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "Be cool! A member of the Heroes Association just joined.",
+                    "Be cool! my develper just joined.",
                     reply_to_message_id=reply,
                 )
                 welcome_log = (
@@ -1068,15 +1068,15 @@ def welcome_mute_help(update: Update, context: CallbackContext):
 
 
 # TODO: get welcome data from group butler snap
-# def __import_data__(chat_id, data):
-#     welcome = data.get('info', {}).get('rules')
-#     welcome = welcome.replace('$username', '{username}')
-#     welcome = welcome.replace('$name', '{fullname}')
-#     welcome = welcome.replace('$id', '{id}')
-#     welcome = welcome.replace('$title', '{chatname}')
-#     welcome = welcome.replace('$surname', '{lastname}')
-#     welcome = welcome.replace('$rules', '{rules}')
-#     sql.set_custom_welcome(chat_id, welcome, sql.Types.TEXT)
+ def __import_data__(chat_id, data):
+     welcome = data.get('info', {}).get('rules')
+     welcome = welcome.replace('$username', '{username}')
+     welcome = welcome.replace('$name', '{fullname}')
+     welcome = welcome.replace('$id', '{id}')
+     welcome = welcome.replace('$title', '{chatname}')
+     welcome = welcome.replace('$surname', '{lastname}')
+     welcome = welcome.replace('$rules', '{rules}')
+     sql.set_custom_welcome(chat_id, welcome, sql.Types.TEXT)
 
 
 def __migrate__(old_chat_id, new_chat_id):
