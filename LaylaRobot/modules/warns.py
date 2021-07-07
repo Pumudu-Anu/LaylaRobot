@@ -117,11 +117,7 @@ def warn(user: User,
     else:
         keyboard = InlineKeyboardMarkup([[
             InlineKeyboardButton(
-                "⚠️ Remove warn", callback_data="rm_warn({})".format(user.id))
-        ]])
-        keyboard = InlineKeyboardMarkup([[
-            InlineKeyboardButton(
-                "📝 Rules", url=http://t.me/Kumikosetsukobot?start=rules_{group_id}")
+                "🔘 Remove warn", callback_data="rm_warn({})".format(user.id))
         ]])
 
         reply = (
