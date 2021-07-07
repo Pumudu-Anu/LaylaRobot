@@ -117,8 +117,10 @@ def warn(user: User,
     else:
         keyboard = InlineKeyboardMarkup([[
             InlineKeyboardButton(
-                "🔘 Remove warn", callback_data="rm_warn({})".format(user.id))
-        ]])
+                "⚠️ Remove warn", callback_data="rm_warn({})".format(user.id))
+            InlineKeyboardButton(
+                "📝 Rules", url=await get_start_link(f"btn_rules_{chat_id}")
+         ]])
 
         reply = (
             f"<code>❕</code><b>Warn Event</b>\n"
