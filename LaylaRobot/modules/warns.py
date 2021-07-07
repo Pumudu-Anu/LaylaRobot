@@ -120,8 +120,6 @@ def warn(user: User,
             "⚠️ Remove warn", callback_data="remove_warn_{}".format(warn_id)
         )
     )
-
-    if await db.rules.find_one({"chat_id": chat_id}):
         buttons.insert(
             InlineKeyboardButton(
                 "📝 Rules", url=await get_start_link(f"btn_rules_{chat_id}")
