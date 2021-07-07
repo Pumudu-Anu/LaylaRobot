@@ -14,6 +14,7 @@ from LaylaRobot import (
     TIGERS,
     WOLVES,
     dispatcher,
+    BAN_STICKER,
 )
 from LaylaRobot.modules.disable import DisableAbleCommandHandler
 from LaylaRobot.modules.helper_funcs.chat_status import (
@@ -64,20 +65,20 @@ def ban(update: Update, context: CallbackContext) -> str:
 
     if is_user_ban_protected(chat, user_id, member) and user not in DEV_USERS:
         if user_id == OWNER_ID:
-            message.reply_text("Trying to put me against a God level disaster huh?")
+            message.reply_text("I can't ban my owner.I am sorry 🥺")
         elif user_id in DEV_USERS:
-            message.reply_text("I can't act against our own.")
+            message.reply_text("I can't act against our own.🥺")
         elif user_id in DRAGONS:
             message.reply_text(
-                "Fighting this Dragon here will put civilian lives at risk."
+                "Fighting this Dragon here will put civilian lives at risk.🥺"
             )
         elif user_id in DEMONS:
             message.reply_text(
-                "Bring an order from Heroes association to fight a Demon disaster."
+                "Bring an order from Group to fight a Demon disaster."
             )
         elif user_id in TIGERS:
             message.reply_text(
-                "Bring an order from Heroes association to fight a Tiger disaster."
+                "Bring an order from Group to fight a Tiger disaster."
             )
         elif user_id in WOLVES:
             message.reply_text("Wolf abilities make them ban immune!")
@@ -101,6 +102,9 @@ def ban(update: Update, context: CallbackContext) -> str:
 
     try:
         chat.kick_member(user_id)
+        bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
+        message.reply_text("Banned!")
+        return log
 
         if silent:
             if message.reply_to_message:
@@ -108,7 +112,7 @@ def ban(update: Update, context: CallbackContext) -> str:
             message.delete()
             return log
 
-        # bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
+       bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
         reply = (
             f"<code>❕</code><b>Ban Event</b>\n"
             f"<code> </code><b>•  User:</b> {mention_html(member.user.id, html.escape(member.user.first_name))}"
