@@ -21,6 +21,7 @@ __help__ = """
 ❍ /userbotjoin - invite assistant to your chat
 ❍ /admincache - Refresh admin list
 =>>   *Use*
-1) Add @LaylaRobot in your group to admin with all permission
-2) Add Assistant I'd to your group @LaylaAssistant
+1) Add @Kumikosetsuko in your group to admin with all permission
+2) Add Assistant I'd to your group @TheKumikosetsuko
+3)But currently I can't play music Because,still I am in maintain mood 
 """
