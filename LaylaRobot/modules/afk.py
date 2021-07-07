@@ -58,14 +58,14 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "{} is here![](https://telegra.ph/file/fa41f7f27d12033f664ca.png)",
-                "{} is back![](https://telegra.ph/file/fa41f7f27d12033f664ca.png)",
-                "{} is now in the chat![](https://telegra.ph/file/fa41f7f27d12033f664ca.png)",
-                "{} is awake![](https://telegra.ph/file/753d2efc7f255fc8fd459.png)",
-                "{} is back online![](https://telegra.ph/file/fa41f7f27d12033f664ca.png)",
-                "{} is finally here![](https://telegra.ph/file/fa41f7f27d12033f664ca.png)",
-                "Welcome back! {}[](https://telegra.ph/file/fa41f7f27d12033f664ca.png)",
-                "Where is {}?\nIn the chat![](https://telegra.ph/file/fa41f7f27d12033f664ca.png)",
+                "{} is [here!](https://telegra.ph/file/fa41f7f27d12033f664ca.png)",
+                "{} is [back!](https://telegra.ph/file/fa41f7f27d12033f664ca.png) ",
+                "{} is now in the [chat!](https://telegra.ph/file/fa41f7f27d12033f664ca.png)",
+                "{} is [awake!](https://telegra.ph/file/753d2efc7f255fc8fd459.png)",
+                "{} is back [online!](https://telegra.ph/file/fa41f7f27d12033f664ca.png)",
+                "{} is finally [here!](https://telegra.ph/file/fa41f7f27d12033f664ca.png)",
+                "Welcome [back!](https://telegra.ph/file/fa41f7f27d12033f664ca.png) {}",
+                "Where is [😳](https://telegra.ph/file/fa41f7f27d12033f664ca.png) {}?\nIn the chat!",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
@@ -129,10 +129,10 @@ def check_afk(update, context, user_id, fst_name, userc_id):
         if int(userc_id) == int(user_id):
             return
         if not user.reason:
-            res = "{} is afk[](https://telegra.ph/file/753d2efc7f255fc8fd459.png)".format(fst_name)
+            res = "{} is [afk[](https://telegra.ph/file/753d2efc7f255fc8fd459.png)".format(fst_name)
             update.effective_message.reply_text(res)
         else:
-            res = "{} is afk[](https://telegra.ph/file/753d2efc7f255fc8fd459.png).\nReason: <code>{}</code>".format(
+            res = "{} is [afk](https://telegra.ph/file/753d2efc7f255fc8fd459.png).\nReason: <code>{}</code>".format(
                 html.escape(fst_name), html.escape(user.reason)
             )
             update.effective_message.reply_text(res, parse_mode="html")
