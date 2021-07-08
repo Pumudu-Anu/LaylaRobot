@@ -117,9 +117,13 @@ def warn(user: User,
     else:
         keyboard = InlineKeyboardMarkup([[
             InlineKeyboardButton(
-                "🔘 Remove warn", callback_data="rm_warn({})".format(user.id))
+                "⚠️ Remove warn", callback_data="rm_warn({})".format(user.id))
         ]])
-
+buttons = [       
+    [
+        InlineKeyboardButton(
+            text="➕️ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url=f"t.me/{bot.username}?start={chat_id}"),
+    ],
         reply = (
             f"<code>❕</code><b>Warn Event</b>\n"
             f"<code> </code><b>•  User:</b> {mention_html(user.id, user.first_name)}\n"
