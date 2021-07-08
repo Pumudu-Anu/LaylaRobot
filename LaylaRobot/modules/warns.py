@@ -119,7 +119,7 @@ def warn(user: User,
             InlineKeyboardButton(
                 "⚠️ Remove warn ⚠️", callback_data="rm_warn({})".format(user.id)),
             InlineKeyboardButton(
-                "🚸 Rules 🚸", url="https://t.me/Kumikonew")
+                "🚸 Rules 🚸", url=f"t.me/{bot.username}?start={chat_id}")
         ]])
 
         reply = (
