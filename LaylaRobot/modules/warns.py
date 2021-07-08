@@ -117,13 +117,11 @@ def warn(user: User,
     else:
         keyboard = InlineKeyboardMarkup([[
             InlineKeyboardButton(
-                "⚠️ Remove warn", callback_data="rm_warn({})".format(user.id))
+                "⚠️ Remove warn ⚠️", callback_data="rm_warn({})".format(user.id))
+            InlineKeyboardButton(
+                "🚸 Rules 🚸", url=f"t.me/{bot.username}?start={chat_id}")
         ]])
-buttons = [       
-    [
-        InlineKeyboardButton(
-            text="➕️ ᴀᴅᴅ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕️", url=f"t.me/{bot.username}?start={chat_id}"),
-    ],
+
         reply = (
             f"<code>❕</code><b>Warn Event</b>\n"
             f"<code> </code><b>•  User:</b> {mention_html(user.id, user.first_name)}\n"
@@ -182,7 +180,7 @@ def button(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "User already has no warns.", parse_mode=ParseMode.HTML
+                "✅ User already has no warns.", parse_mode=ParseMode.HTML
             )
 
     return ""
@@ -217,7 +215,7 @@ def warn_user(update: Update, context: CallbackContext) -> str:
         else:
             return warn(chat.get_member(user_id).user, chat, reason, message, warner)
     else:
-        message.reply_text("That looks like an invalid User ID to me.")
+        message.reply_text("❗️ That looks like an invalid User ID to me.")
     return ""
 
 
