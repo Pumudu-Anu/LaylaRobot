@@ -74,11 +74,10 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-{https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg}
-Hello (first_name), My Name is Kumiko! 
-I am an advanced group management bot.
-You can find the list of available commands with /help.
-Powered by [AI Kumiko Group]{https://t.me/KumikoSetsuko}
+https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg
+Hello, I'm [Kumiko](https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg) ❤ [ ](https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg)
+`I can manage groups perfectly.. HIT` /help
+Maintained by [KumikoSetsuko](https://t.me/KumikoSetsuko)
 """
 
 buttons = [
