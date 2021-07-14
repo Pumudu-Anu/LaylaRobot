@@ -73,8 +73,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = 
-"""
+PM_START_TEXT = """
 Hello, I'm [Kumiko](https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg) ❤ [ ](https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg)
 `I can manage groups perfectly.. HIT` /help
 Maintained by [KumikoSetsuko](https://t.me/KumikoSetsuko)
