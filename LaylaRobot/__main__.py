@@ -74,9 +74,9 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg
+{https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg}
 Hello (first_name), My Name is Kumiko! 
-I am anadvanced group management bot.
+I am an advanced group management bot.
 You can find the list of available commands with /help.
 Powered by [AI Kumiko Group]{https://t.me/KumikoSetsuko}
 """
