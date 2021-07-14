@@ -73,7 +73,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = 'https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg'
+PM_START_TEXT = 
 """
 Hello, I'm [Kumiko](https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg) ❤ [ ](https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg)
 `I can manage groups perfectly.. HIT` /help
@@ -104,8 +104,8 @@ buttons = [
 
 
 HELP_STRINGS = """
-`Hi.. I'M` Kumiko
-`ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`
+`Hi.. I'M` [Kumiko] {https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg}
+`Click following buttons and take special modules..`
 Powered by :- [Kumiko](https://t.me/KumikoSetsuko)"""
 
 layla_IMG = "https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg"
