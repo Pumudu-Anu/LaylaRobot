@@ -79,15 +79,14 @@ STICKERS = (
     "CAACAgUAAx0CSUIogQACA9Bg8pcFfQkdolC-i1JpZe6tV7clxAAClwMAAh9zkFfbm_iD9oSruSAE"
 )
 
-#@register(cmds="start", no_args=True, only_pm=True)
-#async def start_cmd(message):
-    #await message.reply_sticker(random.choice(STICKERS))
-    #await get_start_func(message)
+def stickinmyass(bot, update):
+    bot.send_sticker(random.choice(STICKERS))
+stickyass = MessageHandler(Filters.sticker, stickinmyass)
+dispatcher.add_handler(stickyass)
+j = updater.job_queue
 
 
-PM_START_TEXT =
-  try message.reply_sticker(random.choice(STICKERS)) 
-"""
+PM_START_TEXT ="""
 Hello, I'm [Kumiko](https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg) ❤ [ ](https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg)
 `I can manage groups perfectly.. HIT` /help
 Maintained by [KumikoSetsuko](https://t.me/KumikoSetsuko)
