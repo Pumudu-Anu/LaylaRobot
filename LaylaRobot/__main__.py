@@ -72,12 +72,22 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
+STICKERS = (
+    "CAACAgUAAx0CSUIogQACA75g8pWTK70pYkB4U_vIE1WSCpjn0QAChwMAAh9zkFfwPKuXO1RrLyAE"
+    "CAACAgUAAx0CSUIogQACA8lg8padMbgb3xM1b5ZWHEdT0OiCOAACkwMAAh9zkFeMRBd4VZOalCAE"
+    "CAACAgUAAx0CSUIogQACA81g8pbUisr5Wfd-0G74V7einnJ7GAAClQMAAh9zkFeVcPOfX9ccKiAE"
+    "CAACAgUAAx0CSUIogQACA9Bg8pcFfQkdolC-i1JpZe6tV7clxAAClwMAAh9zkFfbm_iD9oSruSAE"
 
 PM_START_TEXT = """
 Hello, I'm [Kumiko](https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg) ❤ [ ](https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg)
 `I can manage groups perfectly.. HIT` /help
 Maintained by [KumikoSetsuko](https://t.me/KumikoSetsuko)
 """
+
+@register(cmds="start", no_args=True, only_pm=True)
+async def start_cmd(message):
+    await message.reply_sticker(random.choice(STICKERS))
+    await get_start_func(message)
 
 buttons = [
     [
