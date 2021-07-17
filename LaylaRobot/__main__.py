@@ -84,9 +84,10 @@ STICKERS = (
     #await message.reply_sticker(random.choice(STICKERS))
     #await get_start_func(message)
 
-message.reply_sticker(random.choice(STICKERS))
 
-PM_START_TEXT = """
+PM_START_TEXT =
+  try message.reply_sticker(random.choice(STICKERS)) 
+"""
 Hello, I'm [Kumiko](https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg) ❤ [ ](https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg)
 `I can manage groups perfectly.. HIT` /help
 Maintained by [KumikoSetsuko](https://t.me/KumikoSetsuko)
