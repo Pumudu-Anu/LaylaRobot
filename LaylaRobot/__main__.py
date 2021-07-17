@@ -116,7 +116,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-`Hi.. I'M` [Kumiko] {https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg} [ ](https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg)
+`Hi.. I'M` [Kumiko] (https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg) [ ](https://telegra.ph/file/6a28b7d789b7a2adcc6db.jpg)
 `Click following buttons and take special modules..`
 Powered by :- [Kumiko](https://t.me/KumikoSetsuko)"""
 
